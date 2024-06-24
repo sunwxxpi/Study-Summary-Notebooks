@@ -1,19 +1,3 @@
-""" message = '나는야 전역변수'
-print(message)
-list1 = []
-print(list1)
-
-def no_secret():    
-    global message
-    message = '바꿀 수 있을까요?' # global 선언을 해야 수정 가능
-    
-    list1.append('hello')
-    list1[0] = 'impossible' # global 선언 없이도 수정 가능
-    
-no_secret()
-print(message)
-print(list1) """
-
 """ import pickle
 
 gameOption = {
@@ -187,13 +171,6 @@ array1 = np.array([11, 12, 13, 14, 15, 16])
 
 print(array1[index_array]) """
 
-""" a, b, c = 1e9, 75.25e1, 3954e-3 # 지수 표현 방식은 실수 자료형으로 처리
-print(a, b, c) """
-
-""" a = 0.3 + 0.6
-print(a)
-print(f'{a:.1f}') """
-
 """
 set = {2, 5} # List : [], Tuple : (), Set : {}, Dictionary : {: }
 result = [i for i in list1 if i not in set]
@@ -226,28 +203,13 @@ print(data_2)
 a, b, c = map(int, stdin.readline().rstrip().split())
 print(a, b, c) """
 
-""" string1 = '135'
-a = ['3' in string1, '2' in string1]
-print(a) """
-
-""" print((lambda a, b: a + b)(3, 7))
-
-array1 = [('홍길동', 50), ('이순신', 32), ('아무개', 74)]
+""" array1 = [('홍길동', 50), ('이순신', 32), ('아무개', 74)]
 
 def my_key(x):
     return x[1]
 
 print(sorted(array1, key=my_key)) # .sort() != sorted()
-print(sorted(array1, key=lambda x: x[1]))
-
-list1 = [1, 2, 3, 4, 5]
-list2 = [6, 7, 8, 9, 10, 15, 20]
-print(list1 + list2)
-print(list(map(lambda a, b: a + b, list1, list2))) # map() : 각각의 원소 like iterate~ """
-
-""" result = eval("(3+5)*7")
-print(type(result))
-print(result) """
+print(sorted(array1, key=lambda x: x[1])) """
 
 """
 array1 = [['홍길동', 50], ['이순신', 32], ['아무개', 74]]
