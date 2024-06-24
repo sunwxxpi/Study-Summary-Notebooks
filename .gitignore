@@ -1,0 +1,11 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+.DS_Store
+
+*txt
+*csv
+
+Hyuk/AI DD/data/
+Hyuk/AI DD/results/
