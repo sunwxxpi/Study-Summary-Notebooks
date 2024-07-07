@@ -84,24 +84,3 @@ print(f"{num:<10.3f}")
 print(f"{num:a>10.3f}")
 print(f"{num:a^10.3f}")
 print(f"{num:a<10.3f}") """
-
-""" import os, sys
-
-# 1.현재 파일의 이름 & 경로
-print(__file__)
-print(os.path.realpath(__file__)) # __file__ 실제 경로 
-print(os.path.abspath(__file__)) # __file__ 절대 경로
-
-# 2. Directory 경로
-print(os.getcwd()) # Terminal상 현재 작업 Directory 경로
-print(os.path.dirname(os.path.realpath(__file__))) # __file__의 Directory 경로
-
-# 3.Terminal상 현재 작업 Directory의 File 리스트
-print(os.listdir(os.getcwd()))
-
-# 4.작업 디렉토리 변경
-os.chdir("../")
-print(os.getcwd())
-
-# 5. sys.path에 import 가능한 Module 경로를 추가
-sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__)))) """
