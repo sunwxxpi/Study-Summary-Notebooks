@@ -17,3 +17,6 @@ Text 서식, Code Highlighting, Image 및 Link 삽입 예제가 포함되어 있
 각 알고리즘은 이해를 돕기 위한 예제와 함께 설명되어 있습니다.
 ### 6. **pytorch.ipynb**
 - PyTorch 사용법에 대해 다룹니다.
+### 7. **Visualization Practice**
+- OpenCV, Pillow, Matplotlib 관련 Image Visualization 예시 Script입니다.<br>
+Image Visualizaiton 관련하여 본인은 Jupyter Notebook(.ipynb)을 사용하는 것을 적극 추천합니다.
