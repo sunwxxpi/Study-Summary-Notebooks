@@ -1,0 +1,59 @@
+defaults:
+  - _self_
+
+hydra:
+  run:
+    dir: outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  job:
+    chdir: false
+
+mode: fit
+ckpt_path: null
+test_checkpoint: acc
+seed_everything: 42
+
+model:
+  input_size: 32
+  hidden_dim: 512
+  num_classes: 10
+
+data:
+  img_size: 32
+  batch_size: 128
+  data_dir: ./data
+  num_workers: 4
+
+trainer:
+  accelerator: gpu
+  precision: bf16-mixed
+  max_epochs: 10
+  deterministic: true
+  use_logger: true
+  use_callbacks: true
+  fast_dev_run: false
+
+logger:
+  save_dir: ${hydra:runtime.output_dir}
+  name: ""
+  default_hp_metric: false
+
+checkpoint:
+  monitor_loss: metrics/val_loss
+  mode_loss: min
+  filename_loss: "best-loss-{epoch:02d}"
+  monitor_acc: metrics/val_acc
+  mode_acc: max
+  filename_acc: "best-acc-{epoch:02d}"
+
+model_summary:
+  max_depth: -1
+
+optimizer:
+  name: AdamW
+  lr: 0.001
+  weight_decay: 0.01
+
+lr_scheduler:
+  name: CosineAnnealingLR
+  T_max: 10
+  eta_min: 1.0e-6
